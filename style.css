@@ -8,8 +8,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-behavior: smooth !important;
 }
 
 /* ================= BASE ================= */
