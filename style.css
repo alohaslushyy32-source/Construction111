@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
+:root {
+  --bg: #0b0f14;
+  --card: #141b24;
+  --card-hover: #1a2430;
+  --text: #eaeaea;
+  --muted: #9aa4b2;
+
+  /* luxury accent */
+  --accent: #c7a76a;   /* muted gold */
+}
+
 /* GLOBAL RESET */
 * {
   margin: 0;
