@@ -1,18 +1,137 @@
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Thanks! We will contact you soon.");
-  this.reset();
-});
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-// SCROLL REVEAL
-const elements = document.querySelectorAll(".reveal");
+body {
+  background: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
+}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    }
-  });
-});
+/* NAV (sticky) */
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
 
-elements.forEach(el => observer.observe(el));
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo-box {
+  background: #ffb300;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.logo-owner {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.nav-btn {
+  background: #ffb300;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.scroll-arrow {
+  margin-top: 20px;
+  opacity: 0.7;
+  animation: bounce 1.5s infinite;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.dark {
+  background: #151515;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* CARDS */
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* PROJECT IMAGES */
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 15px;
+  background: #ffb300;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  background: black;
+}
+
+/* ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
