@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-/* ================= GLOBAL ================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ html {
   scroll-padding-top: 90px;
 }
 
+/* ================= BASE ================= */
 body {
   font-family: "Inter", sans-serif;
   background: #0b0f14;
@@ -32,7 +33,6 @@ body {
   backdrop-filter: blur(14px);
 }
 
-/* ================= LOGO ================= */
 .logo {
   display: flex;
   flex-direction: column;
@@ -68,6 +68,7 @@ body {
 
 h1, h2, h3 {
   font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 /* ================= HERO ================= */
@@ -170,6 +171,12 @@ textarea {
   border: none;
   border-radius: 8px;
   color: white;
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
 }
 
 /* ================= FOOTER ================= */
