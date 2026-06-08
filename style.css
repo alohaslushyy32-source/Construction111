@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ================= GLOBAL ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -16,9 +19,7 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ================= NAV ================= */
 .nav {
   position: sticky;
   top: 0;
@@ -31,6 +32,7 @@ body {
   backdrop-filter: blur(14px);
 }
 
+/* ================= LOGO ================= */
 .logo {
   display: flex;
   flex-direction: column;
@@ -56,9 +58,7 @@ body {
   opacity: 0.6;
 }
 
-/* =========================
-   LAYOUT SECTIONS
-========================= */
+/* ================= SECTIONS ================= */
 .section {
   padding: 100px 20px;
   max-width: 1100px;
@@ -66,18 +66,11 @@ body {
   text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: 500;
-  letter-spacing: 0.5px;
 }
 
-p {
-  color: #9aa4b2;
-}
-
-/* =========================
-   HERO
-========================= */
+/* ================= HERO ================= */
 .hero {
   height: 90vh;
   display: flex;
@@ -88,7 +81,6 @@ p {
 
 .hero h1 {
   font-size: 42px;
-  font-weight: 500;
 }
 
 .hero p {
@@ -96,9 +88,7 @@ p {
   opacity: 0.7;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* ================= BUTTONS ================= */
 .btn,
 .nav-btn {
   display: inline-block;
@@ -118,9 +108,7 @@ p {
   transform: scale(1.05);
 }
 
-/* =========================
-   GRID SYSTEM
-========================= */
+/* ================= GRID ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -128,9 +116,7 @@ p {
   margin-top: 40px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* ================= CARDS ================= */
 .card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
@@ -144,7 +130,6 @@ p {
   border-color: rgba(199,167,106,0.4);
 }
 
-/* service images */
 .card img {
   width: 100%;
   height: 140px;
@@ -153,9 +138,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* =========================
-   PROJECT IMAGES
-========================= */
+/* ================= PROJECTS ================= */
 .project-img {
   width: 100%;
   height: 180px;
@@ -168,9 +151,7 @@ p {
   transform: scale(1.03);
 }
 
-/* =========================
-   QUOTE FORM
-========================= */
+/* ================= QUOTE ================= */
 .quote-box {
   max-width: 550px;
   margin: 40px auto 0;
@@ -189,34 +170,12 @@ textarea {
   border: none;
   border-radius: 8px;
   color: white;
-  outline: none;
 }
 
-textarea {
-  min-height: 120px;
-  resize: none;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* ================= FOOTER ================= */
 footer {
   padding: 60px 20px;
   text-align: center;
   opacity: 0.7;
   font-size: 14px;
-}
-
-/* =========================
-   ANIMATIONS (optional)
-========================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
